@@ -1,15 +1,52 @@
 ---
+import "../styles/styles.css";
+import Playlist_card from "../components/Playlist_card.astro";
+import Nav_item from "../components/Nav_item.astro";
+import Button from "../components/Button.astro";
+import PlaylistRow from "../components/Playlist_row.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <!-- navigationen til venstre -->
+    <section>
+      <img src="#" alt="Logo" />
+      <Nav_item>Home</Nav_item>
+      <Nav_item>Search</Nav_item>
+      <Nav_item>Your Library</Nav_item>
+      <Nav_item>Create Playlist</Nav_item>
+      <Nav_item>Liked Songs</Nav_item>
+      <Button variant="language">English</Button>
+    </section>
+
+    <!-- navigationen i toppen -->
+    <section>
+      <img src="#" alt="Arrow left" />
+      <img src="#" alt="Arrow right" />
+      <Button variant="secondary">Sign Up</Button>
+      <Button variant="primary">Log In</Button>
+    </section>
+
+    <!-- Playlister -->
+    <section>
+      <PlaylistRow playlistname="Focus">
+        <Playlist_card name="Peaceful Piano" text="Relax and enjoy">
+          <img src="https://api.lorem.space/image/album?w=150&h=150&hash=8B7BCDC2" alt="playlistcover" />
+        </Playlist_card>
+        <Playlist_card name="Peaceful Piano" text="Relax and enjoy">
+          <img src="https://api.lorem.space/image/album?w=150&h=150&hash=500B67FB" alt="playlistcover" />
+        </Playlist_card>
+        <Playlist_card name="Peaceful Piano" text="Relax and enjoy">
+          <img src="https://api.lorem.space/image/album?w=150&h=150&hash=500B67FB" alt="playlistcover" />
+        </Playlist_card>
+      </PlaylistRow>
+    </section>
+  </body>
 </html>

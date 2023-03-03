@@ -1,0 +1,28 @@
+---
+const variant = Astro.props.variant;
+---
+
+<button class={variant}>
+  <img src="/icon.png" alt="Icon" />
+  <slot />
+</button>
+
+<style>
+  .primary {
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+  }
+  .secondary {
+    background-color: none;
+    border-radius: none;
+    color: white;
+  }
+  .language {
+    background-color: none;
+    border: 2px;
+    border-color: white;
+    border-radius: 10px;
+    color: white;
+  }
+</style>

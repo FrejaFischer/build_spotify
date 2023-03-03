@@ -1,0 +1,15 @@
+---
+const playlistname = Astro.props.playlistname;
+---
+
+<section>
+  <h1>{playlistname}</h1>
+  <slot />
+  <p>Show All</p>
+</section>
+
+<style>
+  h1 {
+    color: white;
+  }
+</style>
